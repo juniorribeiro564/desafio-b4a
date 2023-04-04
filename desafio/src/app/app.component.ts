@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'desafio';
-  instagram: any
-  contexto: any
+  instagram: any;
+  contexto: any;
+  clickEmail: boolean = false;
 
   produtoLista = [
     {
@@ -66,25 +67,6 @@ export class AppComponent implements OnInit {
     }
   ]
 
-  produtoLista2 = [
-    {
-      img: "../assets/img/produto1.svg"
-    },
-    {
-      img: "../assets/img/produto2.svg"
-    },
-    {
-      img: "../assets/img/produto3.svg"
-    },
-    {
-      img: "../assets/img/produto4.svg"
-    },
-    {
-      img: "../assets/img/produto5.svg"
-    }
-
-  ]
-
   constructor(
   ) { }
 
@@ -126,6 +108,9 @@ export class AppComponent implements OnInit {
         items[currentItem].classList.add("current-item");
       });
     });
+  }
 
+  enviarEmail() {
+    this.clickEmail = true;
   }
 }

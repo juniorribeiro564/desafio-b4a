@@ -1,6 +1,6 @@
 <div class="width-100">
-    <div style="display: flex; align-items: center;">
-        <img  class="width-100" src="../assets/img/alert-rosa.svg" alt="">
+    <div class="display-flex align-center">
+        <img class="width-100" src="../assets/img/alert-rosa.svg" alt="">
         <div class="alert-rose width-100">Frete gratis acima de R$ 250,00</div>
     </div>
 
@@ -23,58 +23,64 @@
             </ol>
 
             <div class="carousel-inner">
-                <div class="item active width-100"><img src="../assets/img/banner1-home 1.svg"> </div>
-                <div class="item width-100"><img src="../assets/img/banner1-home 2.svg"></div>
-                <div class="item width-100"><img src="../assets/img/banner4-home 1.svg"></div>
+                <div class="item active width-100"><img class="width-100" src="../assets/img/banner1-home 1.svg"> </div>
+                <div class="item width-100"><img class="width-100" src="../assets/img/banner1-home 2.svg"></div>
+                <div class="item width-100"><img class="width-100" src="../assets/img/banner4-home 1.svg"></div>
             </div>
-        </div>
-    </div>
-
-    <!-- Carousel-->
-    <!-- <div class="container-carousel">
-        <div *ngFor="let produto of produtoLista">
-            <img class="width-100" [src]="produto.img" alt="Imagem ilustrativa">
-            <div>
-                <div class="">{{produto.instagram}}</div>
-                <div class="">{{produto.contexto}}</div>
-            </div>
-        </div>
-    </div> -->
-
-    <div>
-        <div style="width: 100%;
-        text-align: center;">
-            <div style="width: 100%;
-            
-            font-style: normal;
-            font-weight: 400;
-            font-size: 30px;
-            line-height: 36px;
-            color: #424242;">Nossos Produtos</div>
         </div>
     </div>
 
     <!-- Carousel-->
     <div class="container-carousel">
-        <div *ngFor="let produto of produtoLista2">
+        <div *ngFor="let produto of produtoLista">
             <img class="width-100" [src]="produto.img" alt="Imagem ilustrativa">
+            <div class="feedback">
+                <div class="feedback-instagram">{{produto.instagram}}</div>
+                <div class="feedback-contexto">{{produto.contexto}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="width-100 text-center">
+            <div class="produtos">Nossos Produtos</div>
+        </div>
+    </div>
+
+    <!-- Carousel-->
+    <div class="container">
+        <button class="arrow-left control" aria-label="Previous image">◀</button>
+        <button class="arrow-right control" aria-label="Next Image">▶</button>
+        <div class="gallery-wrapper">
+            <div class="gallery">
+                <img src="../assets/img/produto1.svg" class="item current-item">
+                <img src="../assets/img/produto2.svg" class="item current-item">
+                <img src="../assets/img/produto3.svg" class="item current-item">
+                <img src="../assets/img/produto4.svg" class="item current-item">
+                <img src="../assets/img/produto5.svg" class="item current-item">
+            </div>
         </div>
     </div>
 
     <div class="div-button"><button class="button">Ver mais Produtos</button></div>
 
-    <div style="display: flex;">
+    <div class="display-flex">
         <img class="width-100" src="../assets/img/background-blue.svg" alt="">
-        <div class="cadastre">
+        <div *ngIf="!clickEmail" class="cadastre">
             <span>
                 Cadastre-se aqui e receba descontos e novidades
             </span>
             <div style="margin: 2rem 0rem">
                 <input class="input" type="text" placeholder="Digite seu nome">
                 <input class="input" type="text" placeholder="Digite seu email">
-                <button class="button-enviar">enviar</button>
+                <button (click)="enviarEmail()" class="button-enviar">enviar</button>
             </div>
         </div>
+        
+        <div *ngIf="clickEmail" class="cadastre">
+            <img class="email-cadastrado" src="../assets/img/email-cadastrado.svg" alt="">
+        </div>
+
     </div>
 
 </div>
