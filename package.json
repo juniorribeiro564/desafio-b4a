@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@angular/material": "^15.2.5",
+    "rubik-font": "^0.0.3",
     "scroll-into-view-if-needed": "^3.0.6"
   }
 }

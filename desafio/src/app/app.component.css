@@ -1,15 +1,35 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.width-100 {
+    width: 100%;
+}
+
+.margin-1 {
+    margin: 1rem;
+}
+
+.logo {
+    display: flex;
+    margin: 2rem 2rem;
+}
+
+.menu {
+    width: 100%;
+    height: 24px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: end;
+    line-height: 24px;
+    color: #424242;
+}
+
 .alert-rose {
     position: absolute;
-    height: 22px;
-    right: 566px;
-    top: 9px;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -18,7 +38,7 @@
     color: #424242;
 }
 
-.container {
+.container- {
     position: relative;
     padding: 15px;
     /* max-width: 640px; */
@@ -39,15 +59,12 @@
 }
 
 .galeria {
-
+    display: flex;
 }
 
 .item {
-    width: 250px;
-    height: 250px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
-    opacity: 0.5;
 }
 
 .current-item {
@@ -84,5 +101,79 @@
     left: auto;
     right: 0;
     background: linear-gradient(to right, transparent 0%, black 200%);
+}
 
+.container-dados {
+    position: absolute;
+    width: 19%;
+    margin: 0rem 0rem 1rem 3rem;
+    top: 12rem;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(234, 208, 250, 0.25);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.fonte-dados {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #424242;
+}
+
+.texto-dados {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6C757D;
+}
+
+.container-carousel {
+    display: flex;
+    gap: 15px;
+    margin: 2rem;
+}
+
+.div-button {
+    width: 100%;
+    text-align: center;
+    margin: 1rem;
+}
+
+.button {
+    background: #FFFFFF;
+    border: 1px solid #424242;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #424242;
+    padding: 0.5rem 5rem;
+}
+
+.cadastre {
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #424242;
+    margin: 1.5rem 3rem;
+}
+
+.input {
+    margin-right: 2rem;
+    padding: 9px 11px 9px 16px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 50px;
+}
+
+.button-enviar {
+    position: absolute;
+    background: #EAD0FA;
+    border-radius: 50px;
+    padding: 1rem 6rem;
 }

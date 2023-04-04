@@ -66,6 +66,25 @@ export class AppComponent implements OnInit {
     }
   ]
 
+  produtoLista2 = [
+    {
+      img: "../assets/img/produto1.svg"
+    },
+    {
+      img: "../assets/img/produto2.svg"
+    },
+    {
+      img: "../assets/img/produto3.svg"
+    },
+    {
+      img: "../assets/img/produto4.svg"
+    },
+    {
+      img: "../assets/img/produto5.svg"
+    }
+
+  ]
+
   constructor(
   ) { }
 
@@ -74,6 +93,7 @@ export class AppComponent implements OnInit {
     const controls = document.querySelectorAll(".control");
     let currentItem = 0;
     const items = document.querySelectorAll(".item");
+    // const items = this.produtoLista;
     const maxItems = items.length;
 
     controls.forEach((control) => {
@@ -96,14 +116,14 @@ export class AppComponent implements OnInit {
 
         console.log("currentItem ->", currentItem)
 
-        // items.forEach((item) => item.classList.remove("current-item"));
+        items.forEach((img) => img.classList.remove("current-item"));
 
-        // items[currentItem].scrollIntoView({
-        //   behavior: "smooth",
-        //   inline: "center"
-        // });
+        items[currentItem].scrollIntoView({
+          behavior: "smooth",
+          inline: "center"
+        });
 
-        // items[currentItem].classList.add("current-item");
+        items[currentItem].classList.add("current-item");
       });
     });
 
